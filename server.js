@@ -12,11 +12,14 @@ conectDB();
 const app = express();
 
 const corsOptions = {
-  origin:
+  origin: [
     "https://ordinario-web-front-qqevua2ov-elayas-projects-d13d6d3e.vercel.app",
+    "https://ordinario-web-front.vercel.app",
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
+
 
 app.use(cors(corsOptions));
 
